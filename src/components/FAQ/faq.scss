@@ -1,0 +1,127 @@
+@import '../../styles/mixins';
+
+.faq {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @include tablet {
+    padding-top: 18px;
+    padding-bottom: 0;
+  }
+
+  &__wrapper {
+    padding: 0 124px;
+
+    @include tablet {
+      padding: 0;
+    }
+  }
+
+  &__item {
+    border-bottom: 2px solid #c4c4c4;
+    margin-bottom: 24px;
+
+    @include tablet {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__item-open {
+    & h4 {
+      color: var(--main-purple);
+    }
+    & .plus {
+      display: none;
+    }
+    & .minus {
+      display: block;
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    cursor: pointer;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+
+    & h4 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 48px;
+
+      @include tablet {
+        font-size: 24px;
+        line-height: 28px;
+        padding-left: 24px;
+      }
+    }
+  }
+
+  &__text {
+    margin-bottom: 24px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 0;
+      margin-top: 12px;
+      padding-left: 24px;
+    }
+  }
+
+  &__join {
+    margin: 0 auto;
+    margin-top: 120px;
+    max-width: 1045px;
+
+    @include tablet {
+      margin-top: 36px;
+    }
+  }
+}
+
+.Collapsible {
+  border-bottom: 2px solid #c4c4c4;
+  margin-bottom: 24px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  @include tablet {
+    border-bottom: none;
+    border-left: 2px solid var(--main-purple);
+  }
+}
+
+.plus {
+  color: var(--main-purple);
+  font-size: 72px;
+  line-height: 42px;
+  display: block;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.minus {
+  color: var(--main-purple);
+  font-size: 72px;
+  line-height: 42px;
+  display: none;
+}
