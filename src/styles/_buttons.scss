@@ -1,9 +1,9 @@
-@import './mixins';
+@import "./mixins";
 
 .btn {
   width: 338px;
   height: 76px;
-  background-image: url('../assets/images/btn-bg.png');
+  background: var(--blue);
   background-color: var(--main-purple);
   border-radius: 5px;
   cursor: pointer;

@@ -1,16 +1,12 @@
-@import '../../styles/mixins';
+@import "../../styles/mixins";
 
 .header {
-  padding-top: 33px;
-
+  padding-top: 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   @include mobile {
     padding-top: 10px;
-  }
-
-  &__topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   &__logo {
@@ -55,15 +51,29 @@
 
     & > li {
       cursor: pointer;
-
-      &:hover:not(:last-child) {
-        text-decoration: underline;
+      margin-right: 84px;
+      font-family: "DM Sans";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 2.25rem;
+      line-height: 1.75rem;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: var(--blue);
       }
     }
 
     & a {
       color: #fefefe;
       text-decoration: none;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    & > li {
+      margin-right: 59px;
     }
   }
 
@@ -107,7 +117,7 @@
       text-align: center;
 
       &:not(:last-child)::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: 0;
         left: 50%;

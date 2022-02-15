@@ -1,12 +1,18 @@
-import React from 'react'
-import './promo.scss'
+import React from "react";
+import "./promo.scss";
+import banner from "../../assets/images/banner-01.png";
 
 const Promo = () => {
   return (
-    <section className='promo'>
-      <div className='promo__bg'></div>
+    <section className="promo">
+      <h2 className="promo-title title">
+        THE SUPREME LEADERS <br /> OF THE METAVERSE{" "}
+      </h2>
+      <div className="promo__bg">
+        <img src={banner} alt="banner" />
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default Promo
+export default Promo;
