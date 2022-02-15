@@ -7,6 +7,7 @@ import Header from "./components/Header/Header";
 import Promo from "./components/Promo/Promo";
 import DevicePopup from "./components/DevicePopup/DevicePopup";
 import FAQ from "./components/FAQ/FAQ";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [showDevicePopup, setShowDevicePopup] = useState(false);
@@ -30,7 +31,7 @@ function App() {
       {/* <Roadmap /> */}
       <Info />
       <FAQ />
-      {/* <Footer/> */}
+      <Footer />
 
       {(isMobile || showDevicePopup) && <DevicePopup />}
     </>
