@@ -1,4 +1,4 @@
-@import '../../styles/mixins';
+@import "../../styles/mixins";
 
 .faq {
   padding-top: 120px;
@@ -7,6 +7,18 @@
   @include tablet {
     padding-top: 18px;
     padding-bottom: 0;
+  }
+  &-title {
+    margin-bottom: 24px;
+  }
+  &-subtitle {
+    text-align: center;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 60px;
   }
 
   &__wrapper {
@@ -46,7 +58,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
     cursor: pointer;
 
     @include tablet {
@@ -54,10 +65,12 @@
     }
 
     & h4 {
+      font-family: "DM Sans";
       font-style: normal;
-      font-weight: bold;
-      font-size: 36px;
-      line-height: 48px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 36px;
+      color: var(--blue);
 
       @include tablet {
         font-size: 24px;
@@ -95,13 +108,9 @@
 }
 
 .Collapsible {
-  border-bottom: 2px solid #c4c4c4;
+  background-color: #1c1c1c;
+  padding: 31px 48px;
   margin-bottom: 24px;
-
-  &:last-child {
-    border-bottom: none;
-  }
-
   @include tablet {
     border-bottom: none;
     border-left: 2px solid var(--main-purple);
@@ -112,7 +121,10 @@
   color: var(--main-purple);
   font-size: 72px;
   line-height: 42px;
-  display: block;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @include tablet {
     display: none;
@@ -124,4 +136,7 @@
   font-size: 72px;
   line-height: 42px;
   display: none;
+  & > img {
+    transform: rotate(180deg);
+  }
 }

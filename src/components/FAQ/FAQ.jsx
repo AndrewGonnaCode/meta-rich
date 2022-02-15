@@ -1,18 +1,28 @@
 import React from "react";
 import Collapsible from "react-collapsible";
 import "./faq.scss";
+import arrow from "../../assets/images/arrow.svg";
 
 const FAQ = () => {
   return (
     <section id="faq" className="container faq wow fadeInUp">
+      <h2 className="faq-title title">F.A.Q</h2>
+      <div className="faq-subtitle">
+        New to NFTs? No worries, here are some steps on what you <br /> need to
+        do to get your Meta Rich
+      </div>
       <div className="faq__wrapper">
         <Collapsible
           open
           trigger={
             <div className="faq__item-header">
-              <h4>Why should I join the Soldier Apes Army</h4>
-              <span className="symbol plus">+</span>
-              <span className="symbol minus">-</span>
+              <h4>What is NFT?</h4>
+              <div className="symbol plus">
+                <img src={arrow} alt="" />
+              </div>
+              <div className="symbol minus">
+                <img src={arrow} alt="" />
+              </div>
             </div>
           }
           transitionTime={200}
@@ -32,9 +42,13 @@ const FAQ = () => {
         <Collapsible
           trigger={
             <div className="faq__item-header">
-              <h4>How many Soldiers Ape can I mint?</h4>
-              <span className="symbol plus">+</span>
-              <span className="symbol minus">-</span>
+              <h4>What is Metamask?</h4>
+              <span className="symbol plus">
+                <img src={arrow} alt="" />
+              </span>
+              <span className="symbol minus">
+                <img src={arrow} alt="" />
+              </span>
             </div>
           }
           transitionTime={200}
@@ -52,9 +66,13 @@ const FAQ = () => {
         <Collapsible
           trigger={
             <div className="faq__item-header">
-              <h4>Where can I view my NFT?</h4>
-              <span className="symbol plus">+</span>
-              <span className="symbol minus">-</span>
+              <h4>When is sale open and how much it will cost?</h4>
+              <span className="symbol plus">
+                <img src={arrow} alt="" />
+              </span>
+              <span className="symbol minus">
+                <img src={arrow} alt="" />
+              </span>
             </div>
           }
           transitionTime={200}
@@ -72,9 +90,13 @@ const FAQ = () => {
         <Collapsible
           trigger={
             <div className="faq__item-header">
-              <h4>Is there a presale?</h4>
-              <span className="symbol plus">+</span>
-              <span className="symbol minus">-</span>
+              <h4>Buying NFT for the firts time?</h4>
+              <span className="symbol plus">
+                <img src={arrow} alt="" />
+              </span>
+              <span className="symbol minus">
+                <img src={arrow} alt="" />
+              </span>
             </div>
           }
           transitionTime={200}
@@ -93,9 +115,13 @@ const FAQ = () => {
         <Collapsible
           trigger={
             <div className="faq__item-header">
-              <h4>What about the Mint price?</h4>
-              <span className="symbol plus">+</span>
-              <span className="symbol minus">-</span>
+              <h4>How will you market the ** NFT?</h4>
+              <span className="symbol plus">
+                <img src={arrow} alt="" />
+              </span>
+              <span className="symbol minus">
+                <img src={arrow} alt="" />
+              </span>
             </div>
           }
           transitionTime={200}
@@ -106,41 +132,6 @@ const FAQ = () => {
             <br /> Public Sale is 0.12 ETH + gas fee
           </p>
         </Collapsible>
-
-        <Collapsible
-          trigger={
-            <div className="faq__item-header">
-              <h4>When will I be able to mint the Soldier Apes?</h4>
-              <span className="symbol plus">+</span>
-              <span className="symbol minus">-</span>
-            </div>
-          }
-          transitionTime={200}
-          openedClassName="faq__item-open"
-        >
-          <p className="faq__text">
-            Pre-Sale February 14th 6pm CET <br />
-            Public Sale February 16th 6 pm CET
-          </p>
-        </Collapsible>
-        <Collapsible
-          trigger={
-            <div className="faq__item-header">
-              <h4>Which Wallet can I connect to Mint Soldier Ape?</h4>
-              <span className="symbol plus">+</span>
-              <span className="symbol minus">-</span>
-            </div>
-          }
-          transitionTime={200}
-          openedClassName="faq__item-open"
-        >
-          <p className="faq__text">You can connect MetaMask wallet only</p>
-        </Collapsible>
-      </div>
-
-      <div className="title faq__join">
-        Join us on our online channels to stay up-to-date with the Soldier Apes
-        Army community
       </div>
     </section>
   );

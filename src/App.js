@@ -6,6 +6,7 @@ import { useState } from "react";
 import Header from "./components/Header/Header";
 import Promo from "./components/Promo/Promo";
 import DevicePopup from "./components/DevicePopup/DevicePopup";
+import FAQ from "./components/FAQ/FAQ";
 
 function App() {
   const [showDevicePopup, setShowDevicePopup] = useState(false);
@@ -28,7 +29,7 @@ function App() {
       <Story />
       {/* <Roadmap /> */}
       <Info />
-      {/* <FAQ /> */}
+      <FAQ />
       {/* <Footer/> */}
 
       {(isMobile || showDevicePopup) && <DevicePopup />}
