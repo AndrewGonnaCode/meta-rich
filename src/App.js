@@ -25,8 +25,8 @@ function App() {
       <Header />
       <Promo />
       <Purchase />
-      {/* <Story/>
-    <Roadmap />
+      <Story />
+      {/* <Roadmap />
     <Info/>
     <FAQ />
     <Footer

@@ -1,0 +1,35 @@
+.story {
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.story-title {
+  margin-bottom: 60px;
+  text-align: center;
+}
+.story-info {
+  display: flex;
+  align-items: center;
+  &__image {
+    width: 448px;
+    margin-right: 48px;
+    & > img {
+      width: 100%;
+    }
+  }
+  &__texts {
+    max-width: 448px;
+    & p {
+      font-family: "DM Sans";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+      &:first-of-type {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
