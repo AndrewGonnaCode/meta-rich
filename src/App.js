@@ -26,11 +26,10 @@ function App() {
       <Promo />
       <Purchase />
       <Story />
-      {/* <Roadmap />
-    <Info/>
-    <FAQ />
-    <Footer
-    /> */}
+      {/* <Roadmap /> */}
+      <Info />
+      {/* <FAQ /> */}
+      {/* <Footer/> */}
 
       {(isMobile || showDevicePopup) && <DevicePopup />}
     </>
