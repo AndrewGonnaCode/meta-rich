@@ -1,27 +1,24 @@
 @import "./mixins";
 
 .btn {
-  width: 338px;
-  height: 76px;
-  background: var(--blue);
-  background-color: var(--main-purple);
-  border-radius: 5px;
-  cursor: pointer;
-  border: none;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 28px;
-  color: #ffffff;
-  transition: all 0.2s ease;
-  text-decoration: none;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 16px 48px;
+  width: 136px;
+  height: 56px;
+  left: 652px;
+  top: 766px;
+  border: none;
+  cursor: pointer;
+  background: var(--blue);
+  transition: all 0.3 ease-in-out;
+  border-radius: 5px;
 
   &:hover {
     background-color: #1f172c;
-    color: var(--secondary-purple);
+    color: var(--blue);
   }
 
   @include mobile {
