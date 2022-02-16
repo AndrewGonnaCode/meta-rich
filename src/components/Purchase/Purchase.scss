@@ -70,6 +70,9 @@
     line-height: 69px;
     margin-right: 32px;
     cursor: pointer;
+    &:hover {
+      color: #fefefe;
+    }
   }
   &__value {
     font-family: "DM Sans";
@@ -88,6 +91,9 @@
     font-weight: 500;
     font-size: 48px;
     line-height: 69px;
+    &:hover {
+      color: #fefefe;
+    }
   }
 }
 .purchase-btn {

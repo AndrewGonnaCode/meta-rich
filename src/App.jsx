@@ -5,7 +5,7 @@ import Info from "./components/Info/Info";
 import { useState } from "react";
 import Header from "./components/Header/Header";
 import Promo from "./components/Promo/Promo";
-import DevicePopup from "./components/DevicePopup/DevicePopup";
+import Modal from "./components/Modal/Modal";
 import FAQ from "./components/FAQ/FAQ";
 import Footer from "./components/Footer/Footer";
 import Roadmap from "./components/Roadmap/Roadmap";
