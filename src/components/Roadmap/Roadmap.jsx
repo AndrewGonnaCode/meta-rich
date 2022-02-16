@@ -1,5 +1,5 @@
 import React from "react";
-import heart from "../../assets/images/heart.svg";
+import heart from "../../assets/images/heart.png";
 import creation from "../../assets/images/creation.svg";
 import benefits from "../../assets/images/benefits.svg";
 import begining from "../../assets/images/beginning.svg";
