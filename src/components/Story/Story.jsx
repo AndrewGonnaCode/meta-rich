@@ -4,7 +4,7 @@ import storyImage from "../../assets/images/story.png";
 
 const Story = () => {
   return (
-    <section className="story container">
+    <section className="story container wow zoomIn">
       <h2 className="story-title title">
         UNQUESTIONED <br /> DOMINANCE FINALLY <br /> UNLEASHED
       </h2>

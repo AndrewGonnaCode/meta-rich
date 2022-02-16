@@ -24,7 +24,7 @@ const Roadmap = () => {
           <div className="chain-step">4</div>
         </div>
         <div className="roadmap-info__steps">
-          <div className="roadmap-step">
+          <div className="roadmap-step wow slideInUp">
             <div className="roadmap-step__image">
               <img src={creation} alt="" />
             </div>
@@ -40,7 +40,7 @@ const Roadmap = () => {
               </p>
             </div>
           </div>
-          <div className="roadmap-step">
+          <div className="roadmap-step wow slideInUp">
             <div className="roadmap-step__image">
               <img src={begining} alt="" />
             </div>
@@ -56,7 +56,7 @@ const Roadmap = () => {
               </p>
             </div>
           </div>
-          <div className="roadmap-step">
+          <div className="roadmap-step wow slideInUp">
             <div className="roadmap-step__image">
               <img src={benefits} alt="" />
             </div>
@@ -71,7 +71,7 @@ const Roadmap = () => {
               </p>
             </div>
           </div>
-          <div className="roadmap-step">
+          <div className="roadmap-step wow slideInUp">
             <div className="roadmap-step__image">
               <img src={heart} alt="" />
             </div>

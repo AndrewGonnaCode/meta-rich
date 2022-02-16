@@ -2,11 +2,12 @@ import { isMobile } from "react-device-detect";
 import Purchase from "./components/Purchase/Purchase";
 import Story from "./components/Story/Story";
 import Info from "./components/Info/Info";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
 import Promo from "./components/Promo/Promo";
 import Modal from "./components/Modal/Modal";
 import FAQ from "./components/FAQ/FAQ";
+import { WOW } from "wowjs";
 import Footer from "./components/Footer/Footer";
 import Roadmap from "./components/Roadmap/Roadmap";
 
@@ -22,6 +23,11 @@ function App() {
       setShowDevicePopup(true);
     }
   };
+
+  useEffect(() => {
+    const wow = new WOW({ live: false });
+    wow.init();
+  }, []);
 
   return (
     <>

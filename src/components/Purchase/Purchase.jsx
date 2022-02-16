@@ -50,12 +50,12 @@ const Purchase = () => {
 
   return (
     <>
-      <section className="purchase container">
+      <section className="purchase container wow fadeInUp">
         <h2 className="purchase-title title">MINT IS LIVE</h2>
         <div className="purchase-image">
           <img src={purchaseKong} alt="mint" />
         </div>
-        <div className="purchase-info">
+        <div className="purchase-info wow zoomIn">
           <p className="purchase-price">0.2 ETH</p>
           <p className="purchase-remaining">
             {totalSupply} / 10000 HAVE BEEN MINTED

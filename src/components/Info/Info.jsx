@@ -6,7 +6,7 @@ import bananaIcon from "../../assets/images/banana.png";
 
 const Info = () => {
   return (
-    <section className="info container">
+    <section className="info container wow zoomIn">
       <h2 className="info-title title">HOW TO GET A META RICH</h2>
       <p className="info-text">
         New to NFTs? No worries, here are some steps <br /> on what you need to
