@@ -17,31 +17,37 @@ const Info = () => {
           <div className="info-col__icon">
             <img src={metamaskIcon} alt="metamask" />
           </div>
-          <div className="info-col__name">DOWNLOAD METAMASK</div>
-          <p className="info-col__text">
-            The Chrome Metamask extension will allow you to make purchases with
-            Ethereum. If you are on mobile, please use the Metamask app.
-          </p>
+          <div className="info-col__texts">
+            <div className="info-col__name">DOWNLOAD METAMASK</div>
+            <p>
+              The Chrome Metamask extension will allow you to make purchases
+              with Ethereum. If you are on mobile, please use the Metamask app.
+            </p>
+          </div>
         </div>
         <div className="info-col">
           <div className="info-col__icon">
             <img src={etherIcon} alt="ether" />
           </div>
-          <div className="info-col__name">ADD SOME ETH</div>
-          <p className="info-col__text">
-            The Chrome Metamask extension will allow you to make purchases with
-            Ethereum. If you are on mobile, please use the Metamask app.
-          </p>
+          <div className="info-col__texts">
+            <div className="info-col__name">ADD SOME ETH</div>
+            <p>
+              The Chrome Metamask extension will allow you to make purchases
+              with Ethereum. If you are on mobile, please use the Metamask app.
+            </p>
+          </div>
         </div>
         <div className="info-col">
           <div className="info-col__icon">
             <img src={bananaIcon} alt="banana" />
           </div>
-          <div className="info-col__name">MINT A NFT</div>
-          <p className="info-col__text">
-            The Chrome Metamask extension will allow you to make purchases with
-            Ethereum. If you are on mobile, please use the Metamask app.
-          </p>
+          <div className="info-col__texts">
+            <div className="info-col__name">MINT A NFT</div>
+            <p>
+              The Chrome Metamask extension will allow you to make purchases
+              with Ethereum. If you are on mobile, please use the Metamask app.
+            </p>
+          </div>
         </div>
       </div>
     </section>

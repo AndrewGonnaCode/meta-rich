@@ -81,12 +81,19 @@
   text-align: center;
   color: var(--blue);
 }
-.info-col__text {
-  font-family: "DM Sans";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
-  text-align: center;
-  color: #fefefe;
+.info-col__texts {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateY(-30%);
+  & > p {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #fefefe;
+  }
 }
