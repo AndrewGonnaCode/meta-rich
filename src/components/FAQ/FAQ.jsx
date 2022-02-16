@@ -29,20 +29,17 @@ const FAQ = () => {
           openedClassName="faq__item-open"
         >
           <p className="faq__text">
-            Each Soldier Ape is uniquely created and carefully designed by
-            highly experienced artists by overlaying various pre-designed
-            attributes on the base Soldier Ape character. <br />
-            <br />
-            2.5% from the "second-market royalties" will be dedicated to a
-            special Army Wallet for monthly prizes. Soldiers Ape NFT owners will
-            get exclusive access to our play-to-earn game and Discord Army base.
+            NFT stands for 'non-fungible token. An NFT is basically data that is
+            accounted for in a digital ledger, and that data represents
+            something specific and unique. An NFT can, for example, represent a
+            unique piece of art or a game token.
           </p>
         </Collapsible>
 
         <Collapsible
           trigger={
             <div className="faq__item-header">
-              <h4>What is Metamask?</h4>
+              <h4>How can I buy a supreme kong?</h4>
               <span className="symbol plus">
                 <img src={arrow} alt="" />
               </span>
@@ -55,18 +52,15 @@ const FAQ = () => {
           openedClassName="faq__item-open"
         >
           <p className="faq__text">
-            You will be able to mint a maximum of 100 Soldier Apes NFT per
-            wallet and 10 per transaction. <br /> There will be a maximum of
-            10,000 Soldier Apes NFTs available for mint for the whole project.{" "}
-            <br />
-            Pre-Sale maximum of 3 Soldier Apes NFT per wallert.
+            You will be able to buy on our website when we launch. Join our
+            discord to have more information about our launch date.
           </p>
         </Collapsible>
 
         <Collapsible
           trigger={
             <div className="faq__item-header">
-              <h4>When is sale open and how much it will cost?</h4>
+              <h4>WHAT DOES “MINT” MEAN?</h4>
               <span className="symbol plus">
                 <img src={arrow} alt="" />
               </span>
@@ -79,18 +73,15 @@ const FAQ = () => {
           openedClassName="faq__item-open"
         >
           <p className="faq__text">
-            Once minted, the Soldier Apes Army NFT (ERC-721) token will be added
-            to your wallet which you can check via the Ethereum blockchain.{" "}
-            <br />
-            <br /> You will also be able to view the NFT on OpenSea.io once the
-            listing is approved
+            NFT Minting is the process by which your digital art or digital
+            content becomes a part of the Ethereum blockchain.
           </p>
         </Collapsible>
 
         <Collapsible
           trigger={
             <div className="faq__item-header">
-              <h4>Buying NFT for the firts time?</h4>
+              <h4>HOW MUCH DOES IT COST BUY ONE OF THE SUPREME KONG?</h4>
               <span className="symbol plus">
                 <img src={arrow} alt="" />
               </span>
@@ -103,33 +94,7 @@ const FAQ = () => {
           openedClassName="faq__item-open"
         >
           <p className="faq__text">
-            Yes, there is a presale which you need to win a whitelist entry.{" "}
-            <br />
-            <br />
-            There will be a total of 1000 members who will be able to be
-            whitelisted for presale. To be eligible for the presale check our
-            discord on how to get whitelisted.
-          </p>
-        </Collapsible>
-
-        <Collapsible
-          trigger={
-            <div className="faq__item-header">
-              <h4>How will you market the ** NFT?</h4>
-              <span className="symbol plus">
-                <img src={arrow} alt="" />
-              </span>
-              <span className="symbol minus">
-                <img src={arrow} alt="" />
-              </span>
-            </div>
-          }
-          transitionTime={200}
-          openedClassName="faq__item-open"
-        >
-          <p className="faq__text">
-            PreSale is 0.08 ETH + gas fee <br />
-            <br /> Public Sale is 0.12 ETH + gas fee
+            The Price of Minting and Sale will 0.2 ETH + GAS FEE’S
           </p>
         </Collapsible>
       </div>

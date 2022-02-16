@@ -8,6 +8,7 @@ import Promo from "./components/Promo/Promo";
 import DevicePopup from "./components/DevicePopup/DevicePopup";
 import FAQ from "./components/FAQ/FAQ";
 import Footer from "./components/Footer/Footer";
+import Roadmap from "./components/Roadmap/Roadmap";
 
 function App() {
   const [showDevicePopup, setShowDevicePopup] = useState(false);
@@ -26,14 +27,16 @@ function App() {
     <>
       <Header />
       <Promo />
-      <Purchase />
-      <Story />
-      {/* <Roadmap /> */}
-      <Info />
-      <FAQ />
-      <Footer />
+      <div className="back">
+        <Purchase />
+        <Story />
+        <Roadmap />
+        <Info />
+        <FAQ />
+        <Footer />
+      </div>
 
-      {(isMobile || showDevicePopup) && <DevicePopup />}
+      {/* {(isMobile || showDevicePopup) && <DevicePopup />} */}
     </>
   );
 }

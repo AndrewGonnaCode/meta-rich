@@ -1,0 +1,113 @@
+.roadmap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 120px;
+}
+.roadmap-title {
+  margin-bottom: 24px;
+}
+.roadmap-subtitle {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.roadmap-info {
+  display: flex;
+  justify-content: space-between;
+}
+.roadmap-info__chain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 130px;
+}
+.roadmap-info__steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 824px;
+}
+.roadmap-step {
+  position: relative;
+  display: flex;
+  padding: 24px 48px 24px 36px;
+  &::before {
+    content: url("../../assets/icons/border-extra-large.svg");
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+  &::after {
+    content: url("../../assets/icons/border-extra-large.svg");
+    transform: rotate(180deg);
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+  }
+}
+.roadmap-step__image {
+  margin-right: 36px;
+  width: 156px;
+  height: 156px;
+  & > img {
+    width: 100%;
+  }
+}
+.roadmap-step__info {
+  & > h4 {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--blue);
+    margin-bottom: 24px;
+  }
+  & > p {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fefefe;
+  }
+}
+.chain-step {
+  width: 86px;
+  height: 86px;
+  font-family: "DM Sans";
+  font-style: normal;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 48px;
+  padding: 13px 35px;
+  line-height: 60px;
+  margin-bottom: 12px;
+  position: relative;
+  &::before {
+    content: url("../../assets/icons/border-left_sm.svg");
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    content: url("../../assets/icons/border-right_sm.svg");
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+  }
+}
+.chain-link {
+  width: 1px;
+  height: 178px;
+  background: #fff;
+  margin-bottom: 12px;
+}

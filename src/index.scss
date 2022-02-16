@@ -16,6 +16,13 @@ body {
   background: #000;
 }
 
+.back {
+  background-image: url("./assets/images/Back.svg");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .container {
   max-width: Min(100%, var(--container-width));
   margin: 0 auto;
