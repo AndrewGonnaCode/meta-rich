@@ -36,7 +36,7 @@ export function useTotalSupply() {
       method: "totalSupply",
       args: [],
     }) ?? [];
-  return totalSupply;
+  return totalSupply ? parseInt(totalSupply._hex, 16) : 0;
 }
 
 export function useBuyTokens() {

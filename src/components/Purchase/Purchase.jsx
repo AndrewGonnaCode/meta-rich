@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import "./Purchase.scss";
 import purchaseKong from "../../assets/images/mint.png";
 import { useEtherBalance, useEthers } from "@usedapp/core";
-import { useBuyTokens, useTokenPrice } from "../../assets/contract";
+import {
+  useBuyTokens,
+  useTokenPrice,
+  useTotalSupply,
+} from "../../assets/contract";
 import Modal from "../Modal/Modal";
 
 const Purchase = () => {
@@ -19,6 +23,9 @@ const Purchase = () => {
   const userBalance = useEtherBalance(account);
   const tokenPrice = useTokenPrice();
 
+  const totalSupply = useTotalSupply();
+
+  console.log("totalSupply", totalSupply);
   const increaseHandler = (e) => {
     if (inputValue !== MAX_TOKENS_AMOUNT) {
       setInputValue((prev) => prev + 1);
@@ -51,7 +58,9 @@ const Purchase = () => {
         </div>
         <div className="purchase-info">
           <p className="purchase-price">0.2 ETH</p>
-          <p className="purchase-remaining">1271 / 2000 HAVE BEEN MINTED</p>
+          <p className="purchase-remaining">
+            {totalSupply} / 10000 HAVE BEEN MINTED
+          </p>
           <p className="purchase-text">
             Pick the amount of NFT's you would like to mint.
           </p>
