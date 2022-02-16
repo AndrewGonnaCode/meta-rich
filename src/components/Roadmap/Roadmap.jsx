@@ -1,11 +1,38 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import heart from "../../assets/images/heart.svg";
 import creation from "../../assets/images/creation.svg";
 import benefits from "../../assets/images/benefits.svg";
 import begining from "../../assets/images/beginning.svg";
+import { useInView } from "react-intersection-observer";
 import "./Roadmap.scss";
 
 const Roadmap = () => {
+  const firstStep = useRef(null);
+  const secondStep = useRef(null);
+  const thirdStep = useRef(null);
+  const forthStep = useRef(null);
+  const secondRow = useRef(null);
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
+
+  const onScroll = () => {
+    let firstStepRect = firstStep.current.getBoundingClientRect();
+    console.log("firstStepRect", firstStepRect);
+    // firstRow.current.style.transform = `translateX(${firstRowRect.top}px)`;
+
+    // let secondRowRect = firstRow.current.getBoundingClientRect();
+    // secondRow.current.style.transform = `translateX(${-secondRowRect.top}px)`;
+  };
+
+  useEffect(() => {
+    if (inView) {
+      window.addEventListener("scroll", onScroll);
+    }
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, [inView]);
   return (
     <section className="roadmap container">
       <h2 className="roadmap-title title">Launch roadmap</h2>
@@ -14,9 +41,11 @@ const Roadmap = () => {
         updated according to your <br /> comments and ideas.
       </div>
       <div className="roadmap-info">
-        <div className="roadmap-info__chain">
+        <div className="roadmap-info__chain" ref={ref}>
           <div className="chain-step">1</div>
-          <div className="chain-link"></div>
+          <div className="chain-link">
+            <div className="chain-link__fill" ref={firstStep}></div>
+          </div>
           <div className="chain-step">2</div>
           <div className="chain-link"></div>
           <div className="chain-step">3</div>
