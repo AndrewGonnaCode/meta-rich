@@ -5,7 +5,7 @@ import arrow from "../../assets/images/arrow.svg";
 
 const FAQ = () => {
   return (
-    <section id="faq" className="container faq wow fadeInUp">
+    <section id="faq" className="container faq wow fadeInUp" id="faq">
       <h2 className="faq-title title">F.A.Q</h2>
       <div className="faq-subtitle">
         New to NFTs? No worries, here are some steps on what you <br /> need to

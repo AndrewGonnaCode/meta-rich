@@ -12,9 +12,6 @@ const Header = () => {
 
   const executeScroll = (block) => {
     let anchor = document.querySelector(`#${block}`);
-    if (block === "mint" && !anchor) {
-      anchor = document.querySelector("#timer");
-    }
     anchor?.scrollIntoView({ behavior: "smooth" });
     setIsMobileMenuVisible(false);
   };
@@ -29,9 +26,9 @@ const Header = () => {
 
       <nav className="header__navbar">
         <ul className="header__list">
-          <li onClick={() => executeScroll("story")}>About</li>
+          <li onClick={() => executeScroll("about")}>About</li>
           <li onClick={() => executeScroll("roadmap")}>Roadmap</li>
-          <li onClick={() => executeScroll("team")}>FAQ</li>
+          <li onClick={() => executeScroll("faq")}>FAQ</li>
         </ul>
       </nav>
 

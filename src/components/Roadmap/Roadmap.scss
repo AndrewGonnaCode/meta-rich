@@ -110,6 +110,13 @@
 .chain-link {
   width: 1px;
   height: 178px;
-  background: #fff;
+  background: #ffffff3b;
   margin-bottom: 12px;
+}
+.chain-link__fill {
+  background: #fff;
+  height: 1px;
+  transform-origin: top left;
+  width: 0;
+  transform: rotate(90deg);
 }

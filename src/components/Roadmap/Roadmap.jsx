@@ -18,8 +18,21 @@ const Roadmap = () => {
 
   const onScroll = () => {
     let firstStepRect = firstStep.current.getBoundingClientRect();
-    console.log("firstStepRect", firstStepRect);
-    // firstRow.current.style.transform = `translateX(${firstRowRect.top}px)`;
+    // console.log("firstStepRect", firstStepRect);
+    firstStep.current.style.height = `${firstStepRect.top}%)`;
+    // console.log("firstStepHeight", firstStep.current.style);
+
+    const scrollPx = document.documentElement.scrollTop;
+    console.log("element", firstStep.current.getBoundingClientRect());
+    // console.log("scrollPX", scrollPx);
+    // console.log("scrollHeight", document.documentElement.scrollHeight);
+    // console.log("scrollClient", document.documentElement.clientHeight);
+    const winHeightPx =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    const scrolled = `${(scrollPx / winHeightPx) * 100}%`;
+
+    console.log("scrolled", scrolled);
 
     // let secondRowRect = firstRow.current.getBoundingClientRect();
     // secondRow.current.style.transform = `translateX(${-secondRowRect.top}px)`;
@@ -34,7 +47,7 @@ const Roadmap = () => {
     };
   }, [inView]);
   return (
-    <section className="roadmap container">
+    <section className="roadmap container" id="roadmap">
       <h2 className="roadmap-title title">Launch roadmap</h2>
       <div className="roadmap-subtitle">
         As we value our community and its creativity, <br /> our roadmap will be
@@ -43,8 +56,8 @@ const Roadmap = () => {
       <div className="roadmap-info">
         <div className="roadmap-info__chain" ref={ref}>
           <div className="chain-step">1</div>
-          <div className="chain-link">
-            <div className="chain-link__fill" ref={firstStep}></div>
+          <div className="chain-link" ref={firstStep}>
+            <div className="chain-link__fill"></div>
           </div>
           <div className="chain-step">2</div>
           <div className="chain-link"></div>
