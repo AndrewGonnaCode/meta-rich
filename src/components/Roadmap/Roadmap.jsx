@@ -8,6 +8,7 @@ import "./Roadmap.scss";
 
 const Roadmap = () => {
   const firstStep = useRef(null);
+  const firstStepFill = useRef(null);
   const secondStep = useRef(null);
   const thirdStep = useRef(null);
   const forthStep = useRef(null);
@@ -18,24 +19,21 @@ const Roadmap = () => {
 
   const onScroll = () => {
     let firstStepRect = firstStep.current.getBoundingClientRect();
-    // console.log("firstStepRect", firstStepRect);
+    console.log("firstStepClient", firstStep.current.style);
     firstStep.current.style.height = `${firstStepRect.top}%)`;
-    // console.log("firstStepHeight", firstStep.current.style);
 
     const scrollPx = document.documentElement.scrollTop;
-    console.log("element", firstStep.current.getBoundingClientRect());
-    // console.log("scrollPX", scrollPx);
-    // console.log("scrollHeight", document.documentElement.scrollHeight);
-    // console.log("scrollClient", document.documentElement.clientHeight);
+    const height =
+      (document.documentElement.clientHeight -
+        firstStep.current.getBoundingClientRect().top) /
+      10;
+    console.log("height", Math.floor(height));
+    firstStepFill.current.style.width = `${height}%`;
+
     const winHeightPx =
       document.documentElement.scrollHeight -
       document.documentElement.clientHeight;
     const scrolled = `${(scrollPx / winHeightPx) * 100}%`;
-
-    console.log("scrolled", scrolled);
-
-    // let secondRowRect = firstRow.current.getBoundingClientRect();
-    // secondRow.current.style.transform = `translateX(${-secondRowRect.top}px)`;
   };
 
   useEffect(() => {
@@ -57,7 +55,7 @@ const Roadmap = () => {
         <div className="roadmap-info__chain" ref={ref}>
           <div className="chain-step">1</div>
           <div className="chain-link" ref={firstStep}>
-            <div className="chain-link__fill"></div>
+            <div className="chain-link__fill" ref={firstStepFill}></div>
           </div>
           <div className="chain-step">2</div>
           <div className="chain-link"></div>
