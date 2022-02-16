@@ -25,7 +25,6 @@ const Purchase = () => {
 
   const totalSupply = useTotalSupply();
 
-  console.log("totalSupply", totalSupply);
   const increaseHandler = (e) => {
     if (inputValue !== MAX_TOKENS_AMOUNT) {
       setInputValue((prev) => prev + 1);

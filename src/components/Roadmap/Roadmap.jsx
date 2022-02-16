@@ -26,7 +26,7 @@ const Roadmap = () => {
         <div className="roadmap-info__steps">
           <div className="roadmap-step">
             <div className="roadmap-step__image">
-              <img src={begining} alt="" />
+              <img src={creation} alt="" />
             </div>
             <div className="roadmap-step__info">
               <h4>ARTISTIC DOMINANCE</h4>
@@ -42,7 +42,7 @@ const Roadmap = () => {
           </div>
           <div className="roadmap-step">
             <div className="roadmap-step__image">
-              <img src={creation} alt="" />
+              <img src={begining} alt="" />
             </div>
             <div className="roadmap-step__info">
               <h4>SUPREME KONG IS INTRODUCED INTO THE METAVERSE</h4>

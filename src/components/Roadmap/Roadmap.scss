@@ -31,7 +31,9 @@
 .roadmap-step {
   position: relative;
   display: flex;
+  align-items: center;
   padding: 24px 48px 24px 36px;
+  margin-bottom: 68px;
   &::before {
     content: url("../../assets/icons/border-extra-large.svg");
     position: absolute;
@@ -40,8 +42,7 @@
     top: 0;
   }
   &::after {
-    content: url("../../assets/icons/border-extra-large.svg");
-    transform: rotate(180deg);
+    content: url("../../assets/icons/border-extra-large-right.svg");
     position: absolute;
     height: 100%;
     right: 0;
@@ -50,13 +51,14 @@
 }
 .roadmap-step__image {
   margin-right: 36px;
-  width: 156px;
-  height: 156px;
+  width: 115px;
+  height: 115px;
   & > img {
     width: 100%;
   }
 }
 .roadmap-step__info {
+  width: 548px;
   & > h4 {
     font-family: "DM Sans";
     font-style: normal;

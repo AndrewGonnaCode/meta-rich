@@ -27,6 +27,11 @@
     height: 48px;
     max-width: 229px;
   }
+  &_modal {
+    width: auto;
+    height: auto;
+    padding: 24px 80px;
+  }
 
   &_meta {
     color: var(--main-purple);
