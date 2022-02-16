@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import heart from "../../assets/images/heart.svg";
 import creation from "../../assets/images/creation.svg";
 import benefits from "../../assets/images/benefits.svg";
 import begining from "../../assets/images/beginning.svg";
-import { useInView } from "react-intersection-observer";
 import "./Roadmap.scss";
 import { useScrollPercentage } from "react-scroll-percentage";
 

@@ -3,12 +3,9 @@ import "./header.scss";
 import logo from "../../assets/images/logo.png";
 import instLogo from "../../assets/icons/inst.svg";
 import twitterLogo from "../../assets/icons/twitter.svg";
-// import hamburger from '../../assets/images/hamburger.svg'
-import { useEthers } from "@usedapp/core";
 
 const Header = () => {
   const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false);
-  const { activateBrowserWallet, account, chainId } = useEthers();
 
   const executeScroll = (block) => {
     let anchor = document.querySelector(`#${block}`);

@@ -27,6 +27,7 @@ function App() {
   useEffect(() => {
     const wow = new WOW({ live: false });
     wow.init();
+    checkUserBrowser();
   }, []);
 
   return (
@@ -42,7 +43,12 @@ function App() {
         <Footer />
       </div>
 
-      {/* {(isMobile || showDevicePopup) && <DevicePopup />} */}
+      {(isMobile || showDevicePopup) && (
+        <Modal
+          text="Your device doen not support metamask"
+          onClose={setShowDevicePopup(false)}
+        />
+      )}
     </>
   );
 }
