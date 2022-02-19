@@ -32,23 +32,15 @@ function App() {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Promo />
-      <div className="back">
+      {/*   
         <Purchase />
         <Story />
         <Roadmap />
         <Info />
-        <FAQ />
-        <Footer />
-      </div>
-
-      {(isMobile || showDevicePopup) && (
-        <Modal
-          text="Your device doen not support metamask"
-          onClose={setShowDevicePopup(false)}
-        />
-      )}
+        <FAQ /> */}
+      <Footer />
     </>
   );
 }
