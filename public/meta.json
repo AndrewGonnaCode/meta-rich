@@ -1,6 +1,28 @@
 {
-  "author_name": "It's time to ditch Skype and TeamSpeak.",
-  "author_url": "https://discordapp.com",
-  "provider_name": "We are hiring! Click here to join us.",
-  "provider_url": "https://discordapp.com/jobs"
+  "content": null,
+  "embeds": [
+    {
+      "title": "Final Chance To Get Your Hype Aliens!",
+      "description": "This is an automatic announcement message.",
+      "url": "https://hypeealien.com",
+      "color": 13107025,
+      "fields": [
+        {
+          "name": "🏷 Sale Info:",
+          "value": "Mint Price: 0.1 ETH per NFT \nAllocation: 5 NFT per wallet address"
+        },
+        {
+          "name": "🏁 Instructions",
+          "value": "1. Head over to our WEBSITE \n2. Connect your Metamask account \n3. Click Mint once wallet is connected \n4. Follow Metamask instructions \n5. Enjoy your Hype Aliens"
+        }
+      ],
+      "author": {
+        "name": "HYPE ALIENS ANNOUNCEMENT",
+        "url": "https://hypeealien.com"
+      },
+      "image": {
+        "url": "https://www.linkpicture.com/q/header.jpeg"
+      }
+    }
+  ]
 }
