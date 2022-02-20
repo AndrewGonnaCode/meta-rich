@@ -49,6 +49,8 @@ const Promo = () => {
     await buyTokens(inputValue, { value: priceValue.toString() });
   };
 
+  console.log("price", tokenPrice);
+
   return (
     <section className="promo">
       <div className="promo-bg">
