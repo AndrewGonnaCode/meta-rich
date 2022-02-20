@@ -14,6 +14,7 @@ export function useTokenPrice() {
       method: "getCurrentPrice",
       args: [],
     }) ?? [];
+  console.log("tokenPice", tokenPrice);
   return tokenPrice ? parseInt(tokenPrice._hex, 16) : 0;
 }
 
@@ -36,6 +37,7 @@ export function useTotalSupply() {
       method: "totalSupply",
       args: [],
     }) ?? [];
+  console.log("totalSSupply", totalSupply);
   return totalSupply ? parseInt(totalSupply._hex, 16) : 0;
 }
 

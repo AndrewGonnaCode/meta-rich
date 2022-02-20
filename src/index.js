@@ -8,7 +8,7 @@ const config = {
   readOnlyChainId: ChainId.Rinkeby,
   readOnlyUrls: {
     [ChainId.Rinkeby]:
-      "https://rinkeby.infura.io/v3/4431cf92881c44f493cd4022cadbc17e",
+      "https://eth-rinkeby.alchemyapi.io/v2/s7titfsaf8g6AoChMSL2xQU3cBJkbIM3",
   },
 };
 

@@ -1,4 +1,4 @@
-export const address = "0x03191a52Dbe3Bf316DF741dFC85a8968C49c1578"; // rinkiby
+export const address = "0x3AC53b6D3CA77F7A3D38521406bD5aA1B0DEC143"; // rinkiby
 
 export const abi = [
   { inputs: [], stateMutability: "nonpayable", type: "constructor" },
