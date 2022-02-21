@@ -73,6 +73,7 @@ const Purchase = () => {
             </div>
           </div>
         </div>
+        
         <button className="purchase-btn btn" onClick={mintHandler}>
           Mint
         </button>
