@@ -10,9 +10,13 @@ import FAQ from "./components/FAQ/FAQ";
 import { WOW } from "wowjs";
 import Footer from "./components/Footer/Footer";
 import Roadmap from "./components/Roadmap/Roadmap";
+import { ChainId } from "@usedapp/core";
+
+const expectedChainId = "0x" + ChainId.Rinkeby;
 
 function App() {
   const [showDevicePopup, setShowDevicePopup] = useState(false);
+  const [showWrongChainPopup, setShowWrongChainPopup] = useState(false);
 
   const checkUserBrowser = () => {
     let userAgent = navigator.userAgent;
@@ -24,16 +28,38 @@ function App() {
     }
   };
 
+  const checkChainId = async () => {
+    const chainId = await window.ethereum.request({ method: "eth_chainId" });
+    if (chainId !== expectedChainId) {
+      switchChain();
+      // setShowWrongChainPopup(true);
+    }
+  };
+
+  const switchChain = async () => {
+    try {
+      await window.ethereum.request({
+        method: "wallet_switchEthereumChain",
+        params: [{ chainId: expectedChainId }],
+      });
+      // setShowWrongChainPopup(false);
+    } catch (error) {
+      alert(`Please switch network to Rinkeby!`);
+      console.error(error);
+    }
+  };
+
   useEffect(() => {
     const wow = new WOW({ live: false });
     wow.init();
     checkUserBrowser();
+    checkChainId();
   }, []);
 
   return (
     <>
       {/* <Header /> */}
-      <Promo />
+      <Promo switchChain={switchChain} />
       {/*   
         <Purchase />
         <Story />
@@ -41,6 +67,12 @@ function App() {
         <Info />
         <FAQ /> */}
       <Footer />
+      {showWrongChainPopup && (
+        <Modal
+          text="To use the app, switch to the correct network by pressing the button bellow"
+          closeModal={switchChain}
+        />
+      )}
     </>
   );
 }

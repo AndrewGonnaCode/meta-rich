@@ -42,6 +42,8 @@ const Purchase = () => {
   const mintHandler = async (e) => {
     const priceValue = tokenPrice * inputValue;
     if (!account) await activateBrowserWallet();
+    const chainId = await window.ethereum.request({ method: "eth_chainId" });
+
     if (priceValue > userBalance) {
       setIsBalancePopup(true);
     }
@@ -73,7 +75,7 @@ const Purchase = () => {
             </div>
           </div>
         </div>
-        
+
         <button className="purchase-btn btn" onClick={mintHandler}>
           Mint
         </button>

@@ -3,7 +3,7 @@ import "./promo.scss";
 import banner from "../../assets/images/kong.png";
 import bg from "../../assets/images/new/bg.jpeg";
 import promoLogo from "../../assets/images/new/logo.png";
-import { useEtherBalance, useEthers } from "@usedapp/core";
+import { ChainId, useEtherBalance, useEthers } from "@usedapp/core";
 import {
   useBuyTokens,
   useTokenPrice,
@@ -11,7 +11,9 @@ import {
 } from "../../assets/contract";
 import Modal from "../Modal/Modal";
 
-const Promo = () => {
+const expectedChainId = "0x" + ChainId.Rinkeby;
+
+const Promo = ({ switchChain }) => {
   const MAX_TOKENS_AMOUNT = 3;
   const { activateBrowserWallet, account, error } = useEthers();
 
@@ -19,6 +21,7 @@ const Promo = () => {
 
   const [isAmountPopup, setAmountPopup] = useState(false);
   const [isBalancePopup, setIsBalancePopup] = useState(false);
+  const [isNetworkPopup, setIsNetworkPopup] = useState(false);
 
   const { state: buyState, send: buyTokens } = useBuyTokens();
 
@@ -42,14 +45,17 @@ const Promo = () => {
   };
 
   const mintHandler = async (e) => {
+    const chainId = await window.ethereum.request({ method: "eth_chainId" });
     const priceValue = tokenPrice * inputValue;
+    if (chainId !== expectedChainId) {
+      setIsNetworkPopup(true);
+      return;
+    }
     if (priceValue > userBalance) {
       setIsBalancePopup(true);
     }
     await buyTokens(inputValue, { value: priceValue.toString() });
   };
-
-  console.log("price", tokenPrice);
 
   return (
     <section className="promo">
@@ -98,6 +104,12 @@ const Promo = () => {
         <Modal
           text="You have no enough ethers"
           onClose={() => setIsBalancePopup(false)}
+        />
+      )}
+      {isNetworkPopup && (
+        <Modal
+          text="Change network to Rinkeby please"
+          onClose={() => setIsNetworkPopup(false)}
         />
       )}
     </section>
