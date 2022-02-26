@@ -62,7 +62,7 @@ const Promo = ({ switchChain }) => {
       <div className="promo-bg">
         <img src={promoLogo} alt="" className="promo-logo" />
         <div className="promo-info">
-          <p className="promo-info__price text-shadow">Mint price @ 0.1 ETH</p>
+          <p className="promo-info__price text-shadow">Mint price @ 0.15 ETH</p>
           {!account && (
             <div className="promo-info__status text-shadow">
               <p className="text-shadow">Public sale is now Live.</p>
